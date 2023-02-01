@@ -39,3 +39,18 @@ print(calculator(leakedActors: leakedActors))
 // step 4
 
 print("\(calculator(leakedActors: leakedActors)) actors have been compromised!")
+
+// step 5
+
+func findCleanActors(leakedActors:Array<(name: String, severity: Int, compromised: Bool)>) -> Array<(name: String, severity: Int, compromised: Bool)> {
+    var actors:Array<(name: String, severity: Int, compromised: Bool)> = []
+    for actor in leakedActors {
+        if(actor.compromised == false) {
+            print(actor.name)
+            actors.append(actor)
+        }
+    }
+    return actors
+}
+
+print(findCleanActors(leakedActors: leakedActors))
