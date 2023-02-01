@@ -36,4 +36,6 @@ func calculator(leakedActors: Array<(name: String, severity: Int, compromised: B
 
 print(calculator(leakedActors: leakedActors))
 
+// step 4
 
+print("\(calculator(leakedActors: leakedActors)) actors have been compromised!")
