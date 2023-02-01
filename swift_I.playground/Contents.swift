@@ -59,4 +59,22 @@ print(findCleanActors(leakedActors: leakedActors))
 
 print("\(findCleanActors(leakedActors: leakedActors).count) clean actors out of \(leakedActors.count)")
 
+// step 7
 
+func findHighRisk(leakedActors:Array<(name: String, severity: Int, compromised: Bool)>) {
+    for actor in leakedActors {
+        if(actor.severity >= 8){
+           if (actor.compromised) {
+                print("\(actor.name)\(actor.severity) *WARNING** **COMPROMISED**")
+           } else {
+               print(actor.name, actor.severity)
+           }
+        }
+    }
+}
+
+// step 8
+
+findHighRisk(leakedActors: leakedActors)
+
+// step 9
