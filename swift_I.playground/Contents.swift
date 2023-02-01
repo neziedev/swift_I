@@ -21,3 +21,19 @@ print(leak_1)
 let leakedActors = [leak_1, leak_2, leak_3, leak_4, leak_5, leak_6, leak_7, leak_8, leak_9, leak_10, leak_11]
 
 print(leakedActors)
+
+// step 3
+
+func calculator(leakedActors: Array<(name: String, severity: Int, compromised: Bool)>) -> Int {
+    var actors = 0
+    for actor in leakedActors {
+        if(actor.compromised == true) {
+            actors+=1
+        }
+    }
+    return actors
+}
+
+print(calculator(leakedActors: leakedActors))
+
+
