@@ -24,7 +24,7 @@ print(leakedActors)
 
 // step 3
 
-func calculator(leakedActors: Array<(name: String, severity: Int, compromised: Bool)>) -> Int {
+func dirtyActors(leakedActors: Array<(name: String, severity: Int, compromised: Bool)>) -> Int {
     var actors = 0
     for actor in leakedActors {
         if(actor.compromised == true) {
@@ -34,11 +34,11 @@ func calculator(leakedActors: Array<(name: String, severity: Int, compromised: B
     return actors
 }
 
-print(calculator(leakedActors: leakedActors))
+print(dirtyActors(leakedActors: leakedActors))
 
 // step 4
 
-print("\(calculator(leakedActors: leakedActors)) actors have been compromised!")
+print("\(dirtyActors(leakedActors: leakedActors)) actors have been compromised!")
 
 // step 5
 
@@ -54,3 +54,9 @@ func findCleanActors(leakedActors:Array<(name: String, severity: Int, compromise
 }
 
 print(findCleanActors(leakedActors: leakedActors))
+
+// step 6
+
+print("\(findCleanActors(leakedActors: leakedActors).count) clean actors out of \(leakedActors.count)")
+
+
