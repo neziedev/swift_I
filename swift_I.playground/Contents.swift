@@ -1,2 +1,1 @@
-var greeting = "Hello, playground"
-print(greeting)
+// get started here
