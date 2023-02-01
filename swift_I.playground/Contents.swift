@@ -78,3 +78,34 @@ func findHighRisk(leakedActors:Array<(name: String, severity: Int, compromised: 
 findHighRisk(leakedActors: leakedActors)
 
 // step 9
+
+func total(leakedActors:Array<(name: String, severity: Int, compromised: Bool)>) {
+    // severity risk total count
+    var low = 0
+    var medium = 0
+    var high = 0
+    
+    // loop
+    for actor in leakedActors {
+        
+        switch actor.severity {
+        case let severity where severity <= 4:
+            print("\(actor.name) is low severity")
+            low+=1
+        case 4...7:
+            print("\(actor.name) is medium severity")
+            medium+=1
+        case let severity where severity >= 8:
+            print("\(actor.name) is high severity")
+            high+=1
+        default:
+            print("no severity")
+        }
+        
+    }
+    print("\(low) low severity actors, \(medium) medium severity actors, \(high) high severity actors")
+}
+
+// step 10
+
+total(leakedActors: leakedActors)
